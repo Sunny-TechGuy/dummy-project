@@ -29,6 +29,11 @@ public class ZZController {
 	}
 	
 	
+	@RequestMapping(value="/createName", method=RequestMethod.POST, produces="application/json")
+	public List<String> createName(@RequestParam String name){
+		//return service.updateName(name);
+		return new ArrayList<String>();
+	}
 	
 
 }
