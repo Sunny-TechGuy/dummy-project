@@ -1,10 +1,12 @@
 package com.zz.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.zz.service.ZZService;
@@ -19,5 +21,14 @@ public class ZZController {
 	public List<String> zzNames(){
 		return service.zzNames();
 	}
+	
+	@RequestMapping(value="/updateName", method=RequestMethod.PUT, produces="application/json")
+	public List<String> updateName(@RequestParam String name){
+		//return service.updateName(name);
+		return new ArrayList<String>();
+	}
+	
+	
+	
 
 }
