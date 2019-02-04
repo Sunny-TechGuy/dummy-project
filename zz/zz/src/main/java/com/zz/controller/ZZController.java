@@ -35,5 +35,13 @@ public class ZZController {
 		return new ArrayList<String>();
 	}
 	
+	@RequestMapping(value="/deleteName", method=RequestMethod.DELETE, produces="application/json")
+	public List<String> deleteName(@RequestParam String name){
+		//return service.updateName(name);
+		return new ArrayList<String>();
+	}
+	
+	
+	
 
 }
